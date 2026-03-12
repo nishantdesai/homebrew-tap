@@ -1,11 +1,14 @@
 # `homebrew-tap`
 
-Homebrew tap for installing [`codex-history`](https://github.com/nishantdesai/codex-history).
+Homebrew tap for command-line tools published under `nishantdesai`.
 
 ## Status
 
-This tap repository installs `codex-history` from GitHub Releases published by [`nishantdesai/codex-history`](https://github.com/nishantdesai/codex-history).
-The current formula tracks the published `v0.1.0` release archives for both Apple Silicon and Intel macOS.
+This repository contains Homebrew formulae that install release artifacts from GitHub Releases.
+
+Currently available:
+
+- [`codex-history`](https://github.com/nishantdesai/codex-history)
 
 ## Install
 
@@ -19,15 +22,16 @@ The tap contains:
 
 - `Formula/codex-history.rb`
 
-The formula is expected to install the `codex-history` binary directly from the release archive produced by the main repository.
+Additional tools can be added as more formulae are published under `Formula/`.
 
 ## Release Update Checklist
 
-For each new release:
+For each new formula or release update:
 
-1. publish a release from `nishantdesai/codex-history`
-2. copy the release archive URL into `Formula/codex-history.rb`
-3. copy the matching SHA256 into `Formula/codex-history.rb`
-4. commit and push the tap update
-5. validate `brew install codex-history`
-6. validate `brew test codex-history`
+1. publish the release in the source repository
+2. add or update the matching file under `Formula/`
+3. point the formula at the published archive URL for each supported macOS architecture
+4. copy the matching SHA256 value for each archive
+5. commit and push the tap update
+6. validate `brew install nishantdesai/tap/<formula>`
+7. validate `brew test <formula>`
