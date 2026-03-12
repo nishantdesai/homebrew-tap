@@ -4,20 +4,13 @@ Homebrew tap for installing [`codex-history`](https://github.com/nishantdesai/co
 
 ## Status
 
-This tap repository is scaffolded and ready for the first public `codex-history` release.
+This tap repository installs `codex-history` from GitHub Releases published by [`nishantdesai/codex-history`](https://github.com/nishantdesai/codex-history).
+The current formula tracks the published `v0.1.0` release archives for both Apple Silicon and Intel macOS.
 
-The main repository is still private, so the formula in this tap is currently a template that must be updated with:
-
-- the published GitHub Release archive URL
-- the matching SHA256 checksum
-
-## Intended Install Flow
-
-Once the first public release exists:
+## Install
 
 ```bash
-brew tap nishantdesai/tap
-brew install codex-history
+brew install nishantdesai/tap/codex-history
 ```
 
 ## Formula Layout
